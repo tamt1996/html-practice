@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jovian Drift SOS</title>
+     <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <iframe id="bg-frame" src="./styles/effect.html"></iframe>
+
+    <form method="post" action="#">
+
+        <!-- Pilot Credentials -->
+        <fieldset>
+            <legend>Pilot Credentials</legend>
+
+            <label for="pilot-name">Pilot Name:</label>
+            <input 
+                type="text" 
+                id="pilot-name" 
+                name="pilot_name" 
+                placeholder="Enter name" 
+                required
+            >
+
+            <br><br>
+
+            <label for="access-code">Access Code:</label>
+            <input 
+                type="password" 
+                id="access-code" 
+                name="access_code" 
+                required
+            >
+
+            <br><br>
+
+            <label for="email">Command Email:</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+            >
+        </fieldset>
+
+        <br>
+    
+    <img src="./styles/spaceship.png" alt="spaceship" class="spaceship image">
+        
+    <br><br>
+
+        <!-- Vessel Diagnostics -->
+        <fieldset>
+            <legend>Vessel Diagnostics</legend>
+
+            <label for="hull-damage">Hull Damage (%):</label>
+            <input 
+                type="number" 
+                id="hull-damage" 
+                name="hull_damage" 
+                required
+            >
+
+            <br><br>
+
+            <label for="emergency-level">Emergency Level:</label>
+            <select 
+                id="emergency-level" 
+                name="emergency_level" 
+                required
+            >
+                <option value="">--Select--</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <!-- Mission Log -->
+        <fieldset>
+            <legend>Mission Log & Evidence</legend>
+
+            <label for="sos-message">SOS Message:</label>
+            <textarea 
+                id="sos-message" 
+                name="sos_message" 
+                rows="3" 
+                required
+            ></textarea>
+
+            <br><br>
+
+            <div>
+                <input 
+                    type="checkbox" 
+                    id="quarantine" 
+                    name="quarantine" 
+                    required
+                >
+                <label for="quarantine">
+                    I agree to quarantine protocols.
+                </label>
+            </div>
+        </fieldset>
+
+        <br>
+
+        <!-- Buttons -->
+        <button type="submit">INITIATE TRANSMISSION</button>
+        <button type="reset">RESET SYSTEM</button>
+
+    </form>
+
+    <script src="./scripts/launch.js"></script>
+
+</body>
+</html>
